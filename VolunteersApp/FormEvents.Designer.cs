@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             lblUsername = new Label();
             btnExit = new Button();
+            dgvEvents = new DataGridView();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEvents).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -70,12 +73,43 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += BtnExit_Click;
             // 
+            // dgvEvents
+            // 
+            dgvEvents.AllowUserToAddRows = false;
+            dgvEvents.AllowUserToDeleteRows = false;
+            dgvEvents.AllowUserToResizeColumns = false;
+            dgvEvents.AllowUserToResizeRows = false;
+            dgvEvents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEvents.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvEvents.BackgroundColor = Color.White;
+            dgvEvents.BorderStyle = BorderStyle.None;
+            dgvEvents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEvents.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvEvents.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvEvents.Dock = DockStyle.Fill;
+            dgvEvents.Location = new Point(10, 50);
+            dgvEvents.MultiSelect = false;
+            dgvEvents.Name = "dgvEvents";
+            dgvEvents.ReadOnly = true;
+            dgvEvents.RowHeadersVisible = false;
+            dgvEvents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvEvents.Size = new Size(964, 601);
+            dgvEvents.TabIndex = 1;
+            // 
             // FormEvents
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(984, 661);
+            Controls.Add(dgvEvents);
             Controls.Add(panel1);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(4);
@@ -85,6 +119,7 @@
             Text = "FormEvents";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEvents).EndInit();
             ResumeLayout(false);
         }
 
@@ -93,5 +128,6 @@
         private Panel panel1;
         private Label lblUsername;
         private Button btnExit;
+        private DataGridView dgvEvents;
     }
 }
